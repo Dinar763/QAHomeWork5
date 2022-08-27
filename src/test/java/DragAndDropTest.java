@@ -1,8 +1,8 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
+import org.junit.jupiter.api.Test;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class DragAndDropTest {
 
@@ -13,7 +13,7 @@ public class DragAndDropTest {
 //        actions().moveToElement($("#column-a")).clickAndHold()
 //            .moveToElement($("#column-b")).release().perform();
 //        $("#column-b").hover();
-        assertEquals("A", $("#column-b").getText());
-        assertEquals("B", $("#column-a").getText());
+        $("#column-b").shouldHave(text("A"));
+        $("#column-a").shouldHave(text("B"));
     }
 }

@@ -1,6 +1,4 @@
-import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.Test;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selectors.byText;
